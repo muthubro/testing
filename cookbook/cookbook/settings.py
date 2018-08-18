@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ingredients.apps.IngredientsConfig',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,12 @@ DATABASES = {
     }
 }
 
+# Graphene
+
+# GRAPHENE = {
+#     'SCHEMA': 'cookbook.schema.schema'
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -119,3 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Fixtures
+
+FIXTURE_DIRS = [
+    os.path.join(BASE_DIR, 'ingredients/fixtures/'),
+]
